@@ -12,6 +12,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet"></link>
+      <style> { `body { font-family: 'MaruBuri'; }`} </style>
       <body>
         <Navigation />
         {children}

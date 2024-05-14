@@ -1,0 +1,51 @@
+.search {
+    display: flex; /* 요소들을 가로로 배열하기 위해 flex를 사용합니다. */
+    justify-content: center; /* 요소들을 수평 방향으로 가운데 정렬합니다. */
+    align-items: center; /* 요소들을 수직 방향으로 가운데 정렬합니다. */
+    margin-top: 50px;
+    margin-bottom: 50px; /* 검색 요소와 방 정보 카드 사이의 간격을 조정합니다. */
+}
+
+/* 검색 요소 스타일 */
+.search select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* 검색 요소 간의 간격을 조정합니다. */
+}
+.search input[type='text'] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* 검색 요소 간의 간격을 조정합니다. */
+    width: 300px;
+}
+.search button {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 60px;
+}
+@media screen and (max-width: 480px) {
+    .search{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .search select {
+        font-size: 10px;
+    }
+    .search input[type='text'] {
+        font-size: 10px;
+        width: 150px;
+    }
+    .search button {
+        font-size: 10px;
+        width: 60px;
+    }
+}

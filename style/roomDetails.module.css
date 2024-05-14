@@ -1,0 +1,24 @@
+.roomDetails {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.roomDetails h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.roomDetails p {
+    margin-bottom: 8px;
+}
+
+.roomDetails strong {
+    font-weight: bold;
+}
+
+.roomDetails p:last-child {
+    margin-bottom: 0;
+}

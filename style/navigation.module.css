@@ -1,28 +1,63 @@
-.nav{
-background-color: gray;
-position: fixed;
-width: 30%;
-margin: 0 auto;
-top: 20px;
-border-radius: 50px;
-padding: 20px 0px;
-left: 50%;
-z-index: 10;
-transform: translateX(-50%);
+.margin{
+    margin-left: 200px;
+}
+.nav {
+    background-color: #333;
+    padding: 10px 0;
+    
 }
 
 .nav ul {
-display: flex;
-justify-content: center;
-gap: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .nav ul li {
-list-style: none;
-transform: none;
-transition: all 0.1s ease-in-out;
+    display: inline;
+    margin: 0 10px;
+    position: relative;
 }
 
-.nav ul li:hover {
-    transform: scale(1.05);
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;    
+}
+
+.nav ul li a:hover {
+    color: lightgray;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* 원룸 메뉴 아래에 위치 */
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.dropdown li {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    color: lightgray;
+}
+@media screen and (max-width: 480px) {
+    .nav ul li a {
+        font-size: 10px;
+    }
+    
+    
 }
