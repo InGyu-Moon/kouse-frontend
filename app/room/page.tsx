@@ -19,6 +19,7 @@ export default function RoomPage(){
             const response = await fetch('http://localhost:8080/api/v1/rooms');
             if(response.ok){
                 const data = await response.json();
+                console.log(data);
                 setAllRoomData(data);
             }
             else{
@@ -38,6 +39,7 @@ export default function RoomPage(){
                 <Link href={`/room/${room.roomId}`} passHref key={index}>
                     <div className={style.roomCard}>
                         <img src='/images/photo.png' />
+                        <p>{room.imgUrl}_1</p>
                         <p>{room.roomName} ({room.roomLocation})</p>
                         <p>보증금: {room.roomDeposit}만원 / {room.roomPaymentType}: {room.roomCost}만원</p>
                     </div>

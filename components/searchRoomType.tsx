@@ -1,8 +1,10 @@
 import style from "../style/searchForm.module.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function SearchRoomType(){
     return(
         <div className={style.search}>
+            <button className='btn btn-outline-success'>원룸 추가 하기</button>
             <form>
                 <select name="searchRoomByType" id="searchRoomLocationType">
                     <option value="">전체</option>   
@@ -11,7 +13,7 @@ export default function SearchRoomType(){
                     <option value="">구정문</option>
                 </select>
                 <input type='text'/>
-                <button type='submit'>검색</button>
+                <button className='btn btn-outline-primary' type='submit'>검색</button>
             </form>
         </div>
     )

@@ -22,16 +22,10 @@
     margin-right: 10px; /* 검색 요소 간의 간격을 조정합니다. */
     width: 300px;
 }
-.search button {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    width: 60px;
+.search > button{
+    margin-right: 30px;
 }
+
 @media screen and (max-width: 480px) {
     .search{
         margin-top: 20px;

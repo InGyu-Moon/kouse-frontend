@@ -50,3 +50,7 @@ export default function RoomDetails({
         </>
     )
 }
+
+// {Array.from({ length: room.num }).map((_, i) => (
+//     <p key={i}>This is p tag {i + 1}</p>
+// ))}

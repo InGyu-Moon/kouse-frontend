@@ -8,6 +8,8 @@ interface Room {
     roomOption: string;
     roomDetail: string;
     roomLocation: string;
+    imgUrl:string,
+    imgAmount:number
     memberId: number;
   }
   
