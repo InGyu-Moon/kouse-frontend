@@ -22,9 +22,6 @@
     margin-right: 10px; /* 검색 요소 간의 간격을 조정합니다. */
     width: 300px;
 }
-.search > button{
-    margin-right: 30px;
-}
 
 @media screen and (max-width: 480px) {
     .search{

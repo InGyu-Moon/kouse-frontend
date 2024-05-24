@@ -1,10 +1,13 @@
+import Link from "next/link";
 import style from "../style/searchForm.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function SearchRoomType(){
     return(
         <div className={style.search}>
-            <button className='btn btn-outline-success'>원룸 추가 하기</button>
+            <Link href="/room/addform" >
+                <button style={{marginRight:'30px'}} className='btn btn-outline-success'>원룸 추가 하기</button>
+            </Link>
             <form>
                 <select name="searchRoomByType" id="searchRoomLocationType">
                     <option value="">전체</option>   

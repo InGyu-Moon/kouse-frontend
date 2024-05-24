@@ -27,13 +27,13 @@ export default function Navigation(){
                 </li>
                 <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <Link href="/room/" >원룸</Link>
-                    {showDropdown && (
+                    {/* {showDropdown && (
                         <ul className={style.dropdown}>
                             <li><Link href="/room/a">A 메뉴</Link></li>
                             <li><Link href="/room/b">B 메뉴</Link></li>
                             <li><Link href="/room/c">C 메뉴</Link></li>
                         </ul>
-                    )}
+                    )} */}
                 </li>
                 <li>
                     <Link href="/mypage">마이페이지</Link>
