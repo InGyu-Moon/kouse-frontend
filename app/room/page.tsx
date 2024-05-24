@@ -16,7 +16,7 @@ export default function RoomPage(){
 
     async function getAllRooms() {
         try{
-            const response = await fetch('http://localhost:8080/api/v1/rooms');
+            const response = await fetch('http://223.130.153.63/api/v1/rooms');
             if(response.ok){
                 const data = await response.json();
                 console.log(data);
