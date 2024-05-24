@@ -17,7 +17,8 @@ export default function RoomDetails({
 
     async function getRoomById() {
         try{
-            const response = await fetch(`http://localhost:8080/api/v1/room/${id}`);
+            // const response = await fetch(`http://localhost:8080/api/v1/room/${id}`);
+            const response = await fetch(`http://223.130.153.63/api/v1/room/${id}`);
             if(response.ok){
                 const data = await response.json();
                 setRoomData(data);
