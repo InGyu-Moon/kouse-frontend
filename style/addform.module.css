@@ -1,0 +1,63 @@
+.addform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addform h3{
+    margin-bottom: 30px;
+}
+.addform form {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.addform form div {
+    margin: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+.addform form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.addform form input{
+      width: 300px;
+}
+.addform form select{
+    font-size: 10px;
+}
+.addform form textarea{
+    margin-left: 15px;
+    height: 100px;
+}
+.addform form input, .addform form select, .addform form textarea, .addform form button {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.addform form button {
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    width: 300px;
+    align-items: center;
+    margin-top: 50px;
+}
+.addform form div label{
+    width: 100px;
+}
+
+@media screen and (max-width: 480px) {
+    .addform {
+        transform: scale(0.8);
+    }
+}

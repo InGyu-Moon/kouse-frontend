@@ -6,6 +6,8 @@ import Room from '../../type/Room';
 import style from "../../style/room.module.css"
 import Link from 'next/link';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export default function RoomPage(){
 
     const [allRoomData, setAllRoomData] = useState<Room[]>([]);
@@ -16,9 +18,7 @@ export default function RoomPage(){
 
     async function getAllRooms() {
         try{
-            // const response = await fetch('http://223.130.155.42:8080/api/v1/rooms');
-            // const response = await fetch('http://223.130.153.63/api/v1/rooms');
-            const response = await fetch('http://localhost/api/v1/rooms');
+            const response = await fetch(`${API_URL}/api/v1/rooms`);
             if(response.ok){
                 const data = await response.json();
                 console.log(data);
