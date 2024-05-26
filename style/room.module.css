@@ -16,7 +16,13 @@
     flex-direction: column; /* 내부 요소를 세로로 배치합니다. */
     width: 250px; /* 방 카드의 너비를 설정합니다. */
     margin-bottom: 20px; /* 각 카드 사이의 간격을 조정합니다. */
+    height: 250px;
+    justify-content: center;
+     /* 수평 방향으로 중앙에 배치합니다. */
+    /* align-items: center; */
+     /* 수직 방향으로 중앙에 배치합니다. */
 }
+
 /* .roomCard img{
     border-radius: 5px;
 } */

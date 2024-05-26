@@ -8,9 +8,10 @@ interface Room {
     roomOption: string;
     roomDetail: string;
     roomLocation: string;
-    imgUrl:string,
-    imgAmount:number
+    hasImg: boolean;
     memberId: number;
+    mainImg: string;
+    mainImgFile: any;
   }
   
   export default Room;
