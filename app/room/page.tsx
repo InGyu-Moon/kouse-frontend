@@ -11,10 +11,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export default function RoomPage(){
 
     const [allRoomData, setAllRoomData] = useState<Room[]>([]);
-
-    //============================
     const [imageUrl, setImageUrl] = useState<string[]>([]);
-    //============================
+
 
     useEffect(() => {
         getAllRooms();
@@ -28,7 +26,6 @@ export default function RoomPage(){
             const response = await fetch(`${API_URL}/api/v1/rooms`);
             if(response.ok){
                 const data = await response.json();
-                console.log("getAllRooms fetch data",data);
                 setAllRoomData(data);
             }
             else{
@@ -40,16 +37,13 @@ export default function RoomPage(){
     }
 
     function getImgUrl() {
-        console.log("getImgUrl - allRoomData",allRoomData);
         allRoomData.forEach(async(room,index)=>{
             if(room.hasImg){
                 try{
-                    // const response = await fetch(`${API_URL}/api/v1/room/img/${room.roomId}`);
-                    const response = await fetch(`http://localhost:8080/api/v1/room/img/${room.roomId}`);
+                    const response = await fetch(`${API_URL}/api/v1/room/img/${room.roomId}`);
                     if(response.ok){
                         const data = await response.json();
                         room.mainImg = data[0];
-                        console.log("getImgUrl - room.mainImg",room.mainImg);
                         getImgFile(room.mainImg,index);
                     }
                     else{
@@ -63,8 +57,7 @@ export default function RoomPage(){
     }
     async function getImgFile(img:string,idx:number) {
         try{
-            // const response = await fetch(`${API_URL}/api/v1/image/${img}`);
-            const response = await fetch(`http://localhost:8080/api/v1/image/${img}`);
+            const response = await fetch(`${API_URL}/api/v1/image/${img}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -77,6 +70,7 @@ export default function RoomPage(){
                     newState[idx] = imageObjectURL; // Update the specific index
                     return newState; // Return the new state
                 });
+
                 allRoomData[idx].mainImgFile = imageObjectURL;
         }catch(error){
             console.error('There was a problem with the fetch operation:', error);

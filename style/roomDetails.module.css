@@ -22,3 +22,17 @@
 .roomDetails p:last-child {
     margin-bottom: 0;
 }
+
+.detail > div{
+    margin-top: 15px;
+    height: '300px';
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+
+}
+.detail div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
