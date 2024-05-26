@@ -84,7 +84,7 @@ export default function RoomPage(){
                 <Link href={`/room/${room.roomId}`} passHref key={index}>
                     <div className={style.roomCard}>
                         {/* <img src='/images/photo.png' /> */}
-                        {imageUrl[index] ? <img src={imageUrl[index]} alt="Fetched from server" /> : <p>Loading Img...</p>}
+                        {imageUrl[index] ? <img src={imageUrl[index]} alt="Fetched from server" /> : <p>Loading Image...</p>}
                         <p>{room.roomName} ({room.roomLocation})</p>
                         <p>보증금: {room.roomDeposit}만원 / {room.roomPaymentType}: {room.roomCost}만원</p>
                     </div>
